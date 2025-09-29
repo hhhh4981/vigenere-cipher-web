@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrario di Vigenère</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="language-selector">
+            <button id="lang-it">IT</button>
+            <button id="lang-en">EN</button>
+        </div>
+
+        <h1 id="mainTitle">Cifrario di Vigenère</h1>
+        <p id="descriptionText">Cifra o decrifra il testo inserendo una chiave.</p>
+
+        <div class="form-group">
+            <label for="inputText" id="inputLabel">Testo:</label>
+            <input type="text" id="inputText" placeholder="Inserisci il testo">
+        </div>
+
+        <div class="form-group">
+            <label for="key" id="keyLabel">Chiave:</label>
+            <input type="text" id="key" placeholder="Inserisci la chiave">
+        </div>
+
+        <div class="buttons">
+            <button id="encryptButton">Cifra</button>
+            <button id="decryptButton">Decifra</button>
+        </div>
+
+        <div class="result-box">
+            <label for="outputText" id="outputLabel">Risultato:</label>
+            <textarea id="outputText" rows="4" readonly></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
