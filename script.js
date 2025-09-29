@@ -59,13 +59,64 @@ document.addEventListener('DOMContentLoaded', () => {
         updateUI();
     });
 
-}
-    }
+    function vigenereCipher(text, key, isEncrypting) {
+        let result = '';
+        let keyIndex = 0;
+        const alphabetLenght = 26;
 
+        const cleanKey = key.toUpperCase().replace(/[^A-Z]/g, '');
 
+        if (cleanKey.length === 0) {
+            return text;
+        }
 
+        for (let i = 0; i < text.length; i++) {
+            const char = text[i].toUpperCase();
 
+            if (char >= 'A' && char <= 'Z') {
+                const textCharValue = char.charCodeAt(0) - 'A'.charCodeAt(0);
+                const keyCharValue = cleanKey[keyIndex % cleanKey.length].charCodeAt(0) - 'A'.charCodeAt(0);
+                let newCharValue;
 
+                if (isEncrypting) {
+                    newCharValue = (textCharValue + keyCharValue) % alphabetLength;
+                } else {
+                    newCharValue = (textCharValue - keyCharValue + alphabetLength) % alphabetLength;
+                }
 
+                result += String.fromCharCode(newCharValue + 'A'.charCodeAt(0));
 
-})
+                keyIndex++;
+                } else {
+                    result += char;
+                }
+            }
+            return result;
+        }
+
+        encryptButton.addEventListener('click', () => {
+            const text = inputField.value;
+            const key = keyInput.value;
+
+            if (!text || !key) {
+                alert(translations[currentLang].alertMessage);
+                return;
+            }
+
+            outputField.value = vigenereCipher(text, key, true);
+        });
+
+        decryptButton.addEventListener('click', () => {
+            const text = inputField.value;
+            const key = keyInput.value;
+
+            if (!text || !key) {
+                alert(translations[currentLang].alertMessage);
+                return;
+            }
+
+            outputField.value = vigenereCipher(text, key, false);
+        });
+
+        updateUI();
+    });
