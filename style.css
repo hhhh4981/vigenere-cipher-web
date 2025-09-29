@@ -111,3 +111,11 @@ button:active {
     margin-top: 30px;
     text-align: left;
 }
+
+textarea#outputText {
+    background-color: #e9ecef;
+    resize: vertical; /*Permette all'utente di ridimensionare solo in altezza; */
+    font-family: monospace;
+    color: #333;
+    min-height: 100px;
+}
