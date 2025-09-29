@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             encryptButton: "Cifra",
             decryptButton: "Decifra",
             outputLabel: "Risultato:",
-            alertMessage: "Per favore, inserici sia il testo che la chiave."
+            alertMessage: "Per favore, inserisci sia il testo che la chiave."
         },
         en: {
             mainTitle: "Vigenère Cipher",
@@ -49,12 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
         keyInput.placeholder = t.keyPlaceholder;
     }
 
-    langItButton.addEventlistener('click', () => {
+    langItButton.addEventListener('click', () => {
         currentLang = 'it';
         updateUI();
     });
 
-    langEnButton.addEventlistener('click', () => {
+    langEnButton.addEventListener('click', () => {
         currentLang = 'en';
         updateUI();
     });
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function vigenereCipher(text, key, isEncrypting) {
         let result = '';
         let keyIndex = 0;
-        const alphabetLenght = 26;
+        const alphabetLength = 26;
 
         const cleanKey = key.toUpperCase().replace(/[^A-Z]/g, '');
 
@@ -87,36 +87,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 result += String.fromCharCode(newCharValue + 'A'.charCodeAt(0));
 
                 keyIndex++;
-                } else {
-                    result += char;
-                }
+            } else {
+                result += char;
             }
-            return result;
+        }
+        return result;
+    }
+
+    encryptButton.addEventListener('click', () => {
+        const text = inputField.value;
+        const key = keyInput.value;
+
+        if (!text || !key) {
+            alert(translations[currentLang].alertMessage);
+            return;
         }
 
-        encryptButton.addEventListener('click', () => {
-            const text = inputField.value;
-            const key = keyInput.value;
-
-            if (!text || !key) {
-                alert(translations[currentLang].alertMessage);
-                return;
-            }
-
-            outputField.value = vigenereCipher(text, key, true);
-        });
-
-        decryptButton.addEventListener('click', () => {
-            const text = inputField.value;
-            const key = keyInput.value;
-
-            if (!text || !key) {
-                alert(translations[currentLang].alertMessage);
-                return;
-            }
-
-            outputField.value = vigenereCipher(text, key, false);
-        });
-
-        updateUI();
+        outputField.value = vigenereCipher(text, key, true);
     });
+
+    decryptButton.addEventListener('click', () => {
+        const text = inputField.value;
+        const key = keyInput.value;
+
+        if (!text || !key) {
+            alert(translations[currentLang].alertMessage);
+            return;
+        }
+
+        outputField.value = vigenereCipher(text, key, false);
+    });
+
+    updateUI();
+});
