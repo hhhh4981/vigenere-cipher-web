@@ -119,3 +119,11 @@ textarea#outputText {
     color: #333;
     min-height: 100px;
 }
+
+button#clearButton {
+    background-color: #6c757d; /* Un grigio scuro per distinguerlo */
+}
+
+button#clearButton:hover {
+    background-color: #5a6268;
+}
