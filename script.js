@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Riferimenti agli elementi DOM
     const inputField = document.getElementById('inputText');
     const keyInput = document.getElementById('key');
     const encryptButton = document.getElementById('encryptButton');
     const decryptButton = document.getElementById('decryptButton');
+    const clearButton = document.getElementById('clearButton');
     const outputField = document.getElementById('outputText');
     const langItButton = document.getElementById('lang-it');
     const langEnButton = document.getElementById('lang-en');
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             keyPlaceholder: "Inserisci la chiave",
             encryptButton: "Cifra",
             decryptButton: "Decifra",
+            clearButton: "Pulisci",
             outputLabel: "Risultato:",
             alertMessage: "Per favore, inserisci sia il testo che la chiave."
         },
@@ -29,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             keyPlaceholder: "Enter the key",
             encryptButton: "Encrypt",
             decryptButton: "Decrypt",
+            clearButton: "Clear",
             outputLabel: "Result:",
             alertMessage: "Please enter both text and key."
         }
@@ -44,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('keyLabel').innerText = t.keyLabel;
         document.getElementById('encryptButton').innerText = t.encryptButton;
         document.getElementById('decryptButton').innerText = t.decryptButton;
+        document.getElementById('clearButton').textContent = t.clearButton;
         document.getElementById('outputLabel').innerText = t.outputLabel;
         inputField.placeholder = t.inputPlaceholder;
         keyInput.placeholder = t.keyPlaceholder;
@@ -116,6 +121,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         outputField.value = vigenereCipher(text, key, false);
+    });
+
+    clearButton.addEventListener('click', () => {
+        inputField.value = '';
+        keyInput.value = '';
+        outputField.value = '';
     });
 
     updateUI();
